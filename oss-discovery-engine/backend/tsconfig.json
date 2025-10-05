@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                    // Latest stable JS features
+    "module": "commonjs",                  // Node.js modules
+    "lib": ["ES2022"],                     // Use modern JS library features
+    "outDir": "./build",                   // Compiled files location
+    "rootDir": "./src",                    // Source files location
+    "strict": true,                        // Strong type checking
+    "esModuleInterop": true,               // Better npm package imports
+    "allowSyntheticDefaultImports": true,  // Cleaner import syntax
+    "skipLibCheck": true,                  // Faster builds
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,             // Import JSON files
+    "declaration": true,                   // Generate .d.ts files
+    "declarationMap": true,                // Source maps for declarations
+    "sourceMap": true,                     // Debugging support
+    "removeComments": true,                // Clean output
+    "noImplicitReturns": true,            // Catch missing return statements
+    "noFallthroughCasesInSwitch": true,   // Catch switch statement errors
+    "noUncheckedIndexedAccess": true,     // Safe array/object access
+    "exactOptionalPropertyTypes": true,    // Stricter optional properties
+    "moduleResolution": "node",            // Node.js module resolution
+    "allowJs": true,                       // Allow .js files (for automation scripts)
+    "checkJs": false,                      // Don't type-check JS files
+    "types": ["node"],                     // Include Node.js types
+    "typeRoots": ["./node_modules/@types", "./src/types"]  // Custom type locations
+  },
+  "include": [
+    "src/**/*"                             // All TypeScript files in src
+  ],
+  "exclude": [
+    "node_modules",                        // Dependencies
+    "build",                               // Compiled output
+    "**/*.test.ts",                        // Test files (optional)
+    "**/*.spec.ts"                         // Spec files (optional)
+  ],
+  "ts-node": {
+    "esm": false,                          // CommonJS for ts-node
+    "experimentalSpecifierResolution": "node"
+  }
+}
+
