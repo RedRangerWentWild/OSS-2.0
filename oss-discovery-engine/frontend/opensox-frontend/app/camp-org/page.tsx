@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from 'react';
 import CampOrgFilter from '@/components/CampOrgFilter';
 import RepoCard from '@/components/RepoCard';
